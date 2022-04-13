@@ -1,38 +1,28 @@
 #pragma once
-#include "Command.h"
-#include <map>
+#include "Input.h"
+#include "Entity.hpp"
+#include <string>
 
-class CommandQueue;
+class Player :public Entity
 
-class Player
 {
+
 public:
-	Player();
-	void	handleEvent(CommandQueue& commands);
-	void	handleRealtimeInput(CommandQueue& commands);
-	
-	enum Action
-	{
-		MoveUp,
-		MoveDown,
-		MoveLeft,
-		MoveRight,
-		Count
-	};
 
-	void	assignKey(Action action, char key);
-	char	getAssignedKey(Action action) const;
-
+	Player(Game* game ,std::string name);
+	virtual void		input(const GameTimer& gt);
 
 private:
-	void	initActions();
-	static bool	isRealtimeAction(Action action);
 
-private:
-	std::map<char, Action>					mKeyBinding;
+	std::string			mSprite;
 
-	std::map<Action, Command>				mActionBinding;
+	ListenerManager		listenerManager;
+	Listener LeftArrowKey;
+	Listener RightArrowKey;
+	Listener UpArrowKey;
+	Listener DownArrowKey;
 
-	std::map<char, bool>					mKeyFlag;
+	virtual void		drawCurrent() const;
+	virtual void		buildCurrent();
 
 };

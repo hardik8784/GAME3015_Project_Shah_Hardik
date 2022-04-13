@@ -1,14 +1,16 @@
 #pragma once
-#include "Entity.h"
+#include "Entity.hpp"
 
-class SpriteNode :
-	public Entity
+class SpriteNode : public Entity
+
 {
-public:
-	SpriteNode(Game* game);
-	RenderItem* mSpriteNodeRitem;
 
-private:
+public:
+
+	SpriteNode(Game* game, std::string spr, std::string name);
+	
+	std::string mSprite;
+
 	virtual void		drawCurrent() const;
 	virtual void		buildCurrent();
 };

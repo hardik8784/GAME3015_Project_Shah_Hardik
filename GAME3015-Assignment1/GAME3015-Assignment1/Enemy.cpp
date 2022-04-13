@@ -1,19 +1,14 @@
-#include "SpriteNode.h"
+#include "Enemy.h"
 #include "Game.hpp"
 
-SpriteNode::SpriteNode(Game* game, std::string spr, std::string name) : Entity(game, name)
+Enemy::Enemy(Game* game, std::string name) : Entity(game, name)
 {
-	mSprite = spr;
+	mSprite = "Raptor";
 	mName = name;
 }
 
-void SpriteNode::drawCurrent() const
-{
-	renderer->World = getTransform();
-	renderer->NumFramesDirty++;
-}
 
-void SpriteNode::buildCurrent()
+void Enemy::buildCurrent()
 {
 	auto render = std::make_unique<RenderItem>();
 	renderer = render.get();
@@ -27,4 +22,9 @@ void SpriteNode::buildCurrent()
 	renderer->BaseVertexLocation = renderer->Geo->DrawArgs["box"].BaseVertexLocation;
 
 	game->getRenderItems().push_back(std::move(render));
+}
+
+void Enemy::drawCurrent() const
+{
+
 }

@@ -1,4 +1,6 @@
 //***************************************************************************************
+// BoxApp.cpp by Frank Luna (C) 2015 All Rights Reserved.
+//
 // Shows how to draw a box in Direct3D 12.
 //
 // Controls:
@@ -6,10 +8,9 @@
 //   Hold the right mouse button down and move the mouse to zoom in and out.
 //***************************************************************************************
 
-#include "Game.h"
+#include "Game.hpp"
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
-	PSTR cmdLine, int showCmd)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,PSTR cmdLine, int showCmd)
 {
 	// Enable run-time memory check for debug builds.
 #if defined(DEBUG) | defined(_DEBUG)

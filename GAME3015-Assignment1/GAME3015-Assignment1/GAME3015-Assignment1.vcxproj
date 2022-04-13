@@ -26,18 +26,21 @@
     <ClCompile Include="..\..\Common\GameTimer.cpp" />
     <ClCompile Include="..\..\Common\GeometryGenerator.cpp" />
     <ClCompile Include="..\..\Common\MathHelper.cpp" />
-    <ClCompile Include="Aircraft.cpp" />
-    <ClCompile Include="Command.cpp" />
-    <ClCompile Include="CommandQueue.cpp" />
+    <ClCompile Include="ControlsState.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="FrameResource.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="SpriteNode.cpp" />
-    <ClCompile Include="Waves.cpp" />
-    <ClCompile Include="World.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="TitleState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Common\Camera.h" />
@@ -49,17 +52,21 @@
     <ClInclude Include="..\..\Common\GeometryGenerator.h" />
     <ClInclude Include="..\..\Common\MathHelper.h" />
     <ClInclude Include="..\..\Common\UploadBuffer.h" />
-    <ClInclude Include="Aircraft.h" />
-    <ClInclude Include="Category.h" />
-    <ClInclude Include="Command.h" />
-    <ClInclude Include="Entity.h" />
+    <ClInclude Include="ControlsState.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Entity.hpp" />
     <ClInclude Include="FrameResource.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="MenuState.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="SceneNode.h" />
+    <ClInclude Include="SceneNode.hpp" />
     <ClInclude Include="SpriteNode.h" />
-    <ClInclude Include="Waves.h" />
-    <ClInclude Include="World.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateList.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="TitleState.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Shaders\Default.hlsl">
@@ -67,10 +74,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="Shaders\LightingUtil.hlsl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="Shaders\TreeSprite.hlsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </FxCompile>

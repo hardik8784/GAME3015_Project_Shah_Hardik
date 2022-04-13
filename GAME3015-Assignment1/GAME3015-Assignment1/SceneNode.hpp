@@ -6,8 +6,6 @@
 #include "../../Common/Camera.h"
 #include "FrameResource.h"
 
-#include "Category.h"
-
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
 using namespace DirectX::PackedVector;
@@ -41,7 +39,7 @@ struct RenderItem
 	MeshGeometry* Geo = nullptr;
 
 	// Primitive topology.
-	D3D12_PRIMITIVE_TOPOLOGY PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
+	D3D12_PRIMITIVE_TOPOLOGY PrimitiveType = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
 
 	// DrawIndexedInstanced parameters.
 	UINT IndexCount = 0;
@@ -50,7 +48,6 @@ struct RenderItem
 };
 
 class Game;
-struct Command;
 
 class SceneNode
 {
@@ -59,15 +56,14 @@ public:
 
 
 public:
-	SceneNode(Game* game);
+	SceneNode(Game* game,  std::string name);
 
 	void					attachChild(Ptr child);
 	Ptr						detachChild(const SceneNode& node);
-
 	void					update(const GameTimer& gt);
 	void					draw() const;
 	void					build();
-
+	void					DebugSceneNode();
 	XMFLOAT3				getWorldPosition() const;
 	void					setPosition(float x, float y, float z);
 	XMFLOAT3				getWorldRotation() const;
@@ -77,9 +73,6 @@ public:
 
 	XMFLOAT4X4				getWorldTransform() const;
 	XMFLOAT4X4				getTransform() const;
-
-	void					onCommand(const Command& command, const GameTimer& gt);
-	virtual unsigned int	getCategory() const;
 
 	void					move(float x, float y, float z);
 private:
@@ -92,13 +85,14 @@ private:
 	void					buildChildren();
 
 protected:
-	Game* game;
-	RenderItem* renderer;
+	Game*					game;
+	RenderItem*				renderer;
 private:
 	XMFLOAT3				mWorldPosition;
 	XMFLOAT3				mWorldRotation;
 	XMFLOAT3				mWorldScaling;
 	std::vector<Ptr>		mChildren;
-	SceneNode* mParent;
+	SceneNode*				mParent;
+	std::string				nName;
 };
 

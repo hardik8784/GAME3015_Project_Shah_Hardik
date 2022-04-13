@@ -49,13 +49,10 @@
     <ClCompile Include="..\..\Common\MathHelper.cpp">
       <Filter>Game Engine\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Aircraft.cpp">
+    <ClCompile Include="ControlsState.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Command.cpp">
-      <Filter>Game\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="CommandQueue.cpp">
+    <ClCompile Include="Enemy.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
@@ -67,7 +64,16 @@
     <ClCompile Include="Game.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
@@ -79,10 +85,13 @@
     <ClCompile Include="SpriteNode.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Waves.cpp">
+    <ClCompile Include="State.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
-    <ClCompile Include="World.cpp">
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleState.cpp">
       <Filter>Game\Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -114,44 +123,53 @@
     <ClInclude Include="..\..\Common\UploadBuffer.h">
       <Filter>Game Engine\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Aircraft.h">
+    <ClInclude Include="ControlsState.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Category.h">
-      <Filter>Game\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Command.h">
-      <Filter>Game\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
+    <ClInclude Include="Enemy.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="FrameResource.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="GameState.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="SceneNode.h">
-      <Filter>Game\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="SpriteNode.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Waves.h">
+    <ClInclude Include="State.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="World.h">
+    <ClInclude Include="StateList.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleState.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.hpp">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneNode.hpp">
       <Filter>Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Shaders\TreeSprite.hlsl">
-      <Filter>Shaders</Filter>
-    </FxCompile>
     <FxCompile Include="Shaders\LightingUtil.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>

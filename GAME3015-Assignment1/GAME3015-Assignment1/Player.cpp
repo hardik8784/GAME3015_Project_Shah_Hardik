@@ -1,134 +1,64 @@
 #include "Player.h"
-#include "CommandQueue.h"
-#include "Aircraft.h"
+#include "Game.hpp"
 
-using namespace DirectX;
-
-struct AircraftMover
+Player::Player(Game* game, std::string name) : Entity(game, name)
 {
-	AircraftMover(float vx, float vy, float vz)
-		: velocity(vx, vy, vz)
-	{
-	}
+	mSprite = "Eagle";
+	mName = "Player";
 
-	void operator() (Aircraft& aircraft, const GameTimer&) const
-	{
-		aircraft.accelerate(velocity);
-	}
+	//bind arrow keys
+	LeftArrowKey.bindInt = 0x25;
+	RightArrowKey.bindInt = 0x27;
+	UpArrowKey.bindInt = 0x26;
+	DownArrowKey.bindInt = 0x28;
 
-	XMFLOAT3 velocity;
-};
+	listenerManager.AddListener(LeftArrowKey);
+	listenerManager.AddListener(RightArrowKey);
+	listenerManager.AddListener(UpArrowKey);
+	listenerManager.AddListener(DownArrowKey);
+}
 
-Player::Player()
+void Player::input(const GameTimer& gt)
 {
-	// key bindings
-
-	mKeyBinding[VK_LEFT] = MoveLeft;
-	mKeyBinding[VK_RIGHT] = MoveRight;
-	mKeyBinding[VK_UP] = MoveUp;
-	mKeyBinding[VK_DOWN] = MoveDown;
-
-	mKeyBinding['A'] = MoveLeft;
-	mKeyBinding['D'] = MoveRight;
-	mKeyBinding['W'] = MoveUp;
-	mKeyBinding['S'] = MoveDown;
+	float speed = 2.0f * gt.DeltaTime();
 	
-	// action bindings
-	initActions();
-
-	for (auto pair : mKeyBinding)
+	if (listenerManager.CheckListener(LeftArrowKey))
 	{
-		mKeyFlag[pair.first] = false;
+		move(-speed, 0, 0);
 	}
 
-	for (auto& pair : mActionBinding)
-		pair.second.category = Category::PlayerAircraft;
-}
-
-void Player::handleEvent(CommandQueue& commands)
-{
-	for (auto pair : mKeyBinding)
+	if (listenerManager.CheckListener(RightArrowKey))
 	{
-		if (!isRealtimeAction(pair.second))
-		{
-			if (mKeyFlag[pair.first])
-			{
-				if (!GetAsyncKeyState(pair.first))
-				{
-					mKeyFlag[pair.first] = false; 
-				}
-			}
-			else
-			{
-				if (GetAsyncKeyState(pair.first) & 0x8000)
-				{
-					mKeyFlag[pair.first] = true;
-					commands.push(mActionBinding[pair.second]);
-				}
-			}
-		}
+		move(speed, 0, 0);
+	}
+
+	if (listenerManager.CheckListener(UpArrowKey))
+	{
+		move(0, speed, 0);
+	}
+	
+	if (listenerManager.CheckListener(DownArrowKey))
+	{
+		move(0, -speed, 0);
 	}
 }
 
-void Player::handleRealtimeInput(CommandQueue& commands)
+void Player::drawCurrent() const
 {
-	for (auto pair : mKeyBinding)
-	{
-		if (GetAsyncKeyState(pair.first) & 0x8000 && isRealtimeAction(pair.second))
-		{
-			commands.push(mActionBinding[pair.second]); 
-		}
-	}
+
 }
 
-void Player::assignKey(Action action, char key)
+void Player::buildCurrent()
 {
-	for (auto itr = mKeyBinding.begin(); itr != mKeyBinding.end(); )
-	{
-		if (itr->second == action)
-			mKeyBinding.erase(itr++);
-		else
-			++itr;
-	}
-
-	mKeyBinding[key] = action;
+	auto render = std::make_unique<RenderItem>();
+	renderer = render.get();
+	renderer->World = getTransform();
+	renderer->ObjCBIndex = game->getRenderItems().size();
+	renderer->Mat = game->getMaterials()[mSprite].get();
+	renderer->Geo = game->getGeometries()["boxGeo"].get();
+	renderer->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
+	renderer->IndexCount = renderer->Geo->DrawArgs["box"].IndexCount;
+	renderer->StartIndexLocation = renderer->Geo->DrawArgs["box"].StartIndexLocation;
+	renderer->BaseVertexLocation = renderer->Geo->DrawArgs["box"].BaseVertexLocation;
+	game->getRenderItems().push_back(std::move(render));
 }
-
-char Player::getAssignedKey(Action action) const
-{
-	for (auto pair : mKeyBinding)
-	{
-		if (pair.second == action)
-			return pair.first;
-	}
-
-	return 0x00;
-}
-
-bool Player::isRealtimeAction(Action action)
-{
-	switch (action)
-	{
-	case MoveLeft:
-	case MoveRight:
-	case MoveDown:
-	case MoveUp:
-		return true;
-
-	default:
-		return false;
-	}
-}
-
-void Player::initActions()
-{
-	const float playerSpeed = 20.f;
-
-	mActionBinding[MoveLeft].action = derivedAction<Aircraft>(AircraftMover(-playerSpeed, 0.f, 0.0f));
-	mActionBinding[MoveRight].action = derivedAction<Aircraft>(AircraftMover(+playerSpeed, 0.f, 0.0f));
-	mActionBinding[MoveUp].action = derivedAction<Aircraft>(AircraftMover(0.f, 0.0f, +playerSpeed));
-	mActionBinding[MoveDown].action = derivedAction<Aircraft>(AircraftMover(0.f, 0.0f, -playerSpeed));
-}
-
-
-
