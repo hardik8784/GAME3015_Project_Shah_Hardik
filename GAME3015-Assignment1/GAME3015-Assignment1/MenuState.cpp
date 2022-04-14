@@ -12,6 +12,10 @@ MenuState::MenuState(Game* window)
 	mOrder = 1;
 }
 
+/// <summary>
+/// Checking the Inputs
+/// </summary>
+/// <param name="gt"></param>
 void MenuState::getInputs(const GameTimer& gt)
 {
 	if (listenerManager.CheckListener(up))
@@ -39,11 +43,19 @@ void MenuState::getInputs(const GameTimer& gt)
 	}
 }
 
+/// <summary>
+/// Drawing the scene
+/// </summary>
+/// <param name="gt"></param>
 void MenuState::draw(const GameTimer& gt)
 {
 	mSceneGraph->draw();
 }
 
+/// <summary>
+/// Updating the scene 
+/// </summary>
+/// <param name="gt"></param>
 void MenuState::update(const GameTimer& gt)
 {
 	mSceneGraph->setPosition(0, 0, 2 * mOrder);
@@ -51,6 +63,9 @@ void MenuState::update(const GameTimer& gt)
 	getInputs(gt);
 }
 
+/// <summary>
+/// Loading the sprites
+/// </summary>
 void MenuState::load()
 {
 	std::unique_ptr<SpriteNode> selector(new SpriteNode(mGame, "Selector", "Arrow"));

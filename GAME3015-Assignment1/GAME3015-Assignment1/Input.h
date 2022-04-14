@@ -3,7 +3,9 @@
 #include <vector>
 #include <string>
 
-
+/// <summary>
+/// Created the struct of Listener
+/// </summary>
 struct Listener
 {
 	char bindChar;
@@ -12,6 +14,9 @@ struct Listener
 	bool active;
 };
 
+/// <summary>
+/// Class ListernerManager which checks the inputs from the player
+/// </summary>
 class ListenerManager
 {
 public:

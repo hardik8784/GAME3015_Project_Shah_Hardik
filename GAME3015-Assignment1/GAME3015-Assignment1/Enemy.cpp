@@ -1,13 +1,20 @@
 #include "Enemy.h"
 #include "Game.hpp"
 
+/// <summary>
+/// Constructor for Enemy
+/// </summary>
+/// <param name="game"></param>
+/// <param name="name"></param>
 Enemy::Enemy(Game* game, std::string name) : Entity(game, name)
 {
 	mSprite = "Raptor";
 	mName = name;
 }
 
-
+/// <summary>
+/// Building the Enemy
+/// </summary>
 void Enemy::buildCurrent()
 {
 	auto render = std::make_unique<RenderItem>();

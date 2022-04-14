@@ -1,6 +1,11 @@
 #include "Player.h"
 #include "Game.hpp"
 
+/// <summary>
+/// Constructor for the Player
+/// </summary>
+/// <param name="game"></param>
+/// <param name="name"></param>
 Player::Player(Game* game, std::string name) : Entity(game, name)
 {
 	mSprite = "Eagle";
@@ -18,6 +23,10 @@ Player::Player(Game* game, std::string name) : Entity(game, name)
 	listenerManager.AddListener(DownArrowKey);
 }
 
+/// <summary>
+/// Check the Inputs
+/// </summary>
+/// <param name="gt"></param>
 void Player::input(const GameTimer& gt)
 {
 	float speed = 2.0f * gt.DeltaTime();
@@ -48,6 +57,9 @@ void Player::drawCurrent() const
 
 }
 
+/// <summary>
+/// Build the Player
+/// </summary>
 void Player::buildCurrent()
 {
 	auto render = std::make_unique<RenderItem>();

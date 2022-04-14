@@ -14,17 +14,28 @@ void ControlsState::getInputs(const GameTimer& gt)
 
 }
 
+/// <summary>
+/// Draw the scene
+/// </summary>
+/// <param name="gt"></param>
 void ControlsState::draw(const GameTimer& gt)
 {
 	mSceneGraph->draw();
 }
 
+/// <summary>
+/// update the scene
+/// </summary>
+/// <param name="gt"></param>
 void ControlsState::update(const GameTimer& gt)
 {
 	mSceneGraph->setPosition(0, 0, 2 * mOrder);
 	mSceneGraph->update(gt);
 }
 
+/// <summary>
+/// load the textures
+/// </summary>
 void ControlsState::load()
 {
 	std::unique_ptr<SpriteNode> bg(new SpriteNode(mGame, "Controls", "Bg"));

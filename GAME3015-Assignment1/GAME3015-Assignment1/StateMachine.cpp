@@ -27,7 +27,10 @@ StateMachine::StateMachine(Game* game)
 
 }
 
-
+/// <summary>
+/// drawing the states
+/// </summary>
+/// <param name="gt"></param>
 void StateMachine::draw(const GameTimer& gt)
 {
 	for (int i = 0; i < states.size(); i++)
@@ -36,6 +39,10 @@ void StateMachine::draw(const GameTimer& gt)
 	}
 }
 
+/// <summary>
+/// Changing the states as per the input
+/// </summary>
+/// <param name="gt"></param>
 void StateMachine::input(const GameTimer& gt)
 {
 	for (int i = 0; i < states.size(); i++)
@@ -97,6 +104,10 @@ void StateMachine::input(const GameTimer& gt)
 	}
 }
 
+/// <summary>
+/// Update the state
+/// </summary>
+/// <param name="gt"></param>
 void StateMachine::update(const GameTimer& gt)
 {
 	for (int i = 0; i < states.size(); i++)
@@ -105,7 +116,10 @@ void StateMachine::update(const GameTimer& gt)
 	}
 }
 
-
+/// <summary>
+/// Setting the state 
+/// </summary>
+/// <param name="s"></param>
 void StateMachine::SetState(State* s)
 {
 	for (int i = 0; i < states.size(); i++)
@@ -121,6 +135,9 @@ void StateMachine::SetState(State* s)
 	}
 }
 
+/// <summary>
+/// Loading the state
+/// </summary>
 void StateMachine::load()
 {
 	for (int i = 0; i < states.size(); i++)

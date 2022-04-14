@@ -1,6 +1,9 @@
 #pragma once
 #include "State.h"
 
+/// <summary>
+/// Created the ControlsState
+/// </summary>
 class ControlsState : public State
 {
 public:
