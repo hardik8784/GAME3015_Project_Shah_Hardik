@@ -1,0 +1,40 @@
+\hypertarget{_state_machine_8h_source}{}\doxysection{State\+Machine.\+h}
+\label{_state_machine_8h_source}\index{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/StateMachine.h@{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/StateMachine.h}}
+\mbox{\hyperlink{_state_machine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_title_state_8h}{TitleState.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_menu_state_8h}{MenuState.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_state_8h}{GameState.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_controls_state_8h}{ControlsState.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_list_8h}{StateList.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00008}\mbox{\hyperlink{class_state_machine}{00008}} \textcolor{keyword}{class }\mbox{\hyperlink{class_state_machine}{StateMachine}}}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00012}00012 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00014}00014     \mbox{\hyperlink{class_state_machine_a650a013388e5a594a0b317055f46cfba}{StateMachine}}(\mbox{\hyperlink{class_game}{Game}}* game);}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00015}00015     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_machine_a45a5e48daf84f00a98f7b7d9087daacc}{draw}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00016}00016     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_machine_a0b92198ca63ecf127f8590dbfd012b1b}{input}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00017}00017     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_machine_a45c84d3e2d2ada9ab91af2ed95928ab4}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00018}00018     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_machine_ab7dedb436c5f118268b0f4347f82a2e4}{SetState}}(\mbox{\hyperlink{class_state}{State}}* s);}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00019}00019     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_machine_a5e7facad173ddddc4d547733058a451c}{load}}();}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00021}00021 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00023}\mbox{\hyperlink{class_state_machine_a2cd3eb5c16821ddd2e3600701942fe4e}{00023}}     \mbox{\hyperlink{class_game}{Game}}* \mbox{\hyperlink{class_state_machine_a2cd3eb5c16821ddd2e3600701942fe4e}{mGame}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00024}\mbox{\hyperlink{class_state_machine_a83450011e61e715f9875e17b5a468c82}{00024}}     std::vector<State*> \mbox{\hyperlink{class_state_machine_a83450011e61e715f9875e17b5a468c82}{states}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00025}\mbox{\hyperlink{class_state_machine_a2fb35f6f929fbb92a868d4223cf278bb}{00025}}     \mbox{\hyperlink{class_title_state}{TitleState}}* \mbox{\hyperlink{class_state_machine_a2fb35f6f929fbb92a868d4223cf278bb}{titleState}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00026}\mbox{\hyperlink{class_state_machine_a4e3d9c92bdbbf0baac783fc47ca2199d}{00026}}     \mbox{\hyperlink{class_menu_state}{MenuState}}* \mbox{\hyperlink{class_state_machine_a4e3d9c92bdbbf0baac783fc47ca2199d}{menuState}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00027}\mbox{\hyperlink{class_state_machine_a434b95bbfcf45cf806ed962b86253216}{00027}}     \mbox{\hyperlink{class_game_state}{GameState}}* \mbox{\hyperlink{class_state_machine_a434b95bbfcf45cf806ed962b86253216}{gameState}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00028}\mbox{\hyperlink{class_state_machine_a51a30d7bea837dd86eef31239ed49e10}{00028}}     \mbox{\hyperlink{class_controls_state}{ControlsState}}* \mbox{\hyperlink{class_state_machine_a51a30d7bea837dd86eef31239ed49e10}{controlsState}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00029}\mbox{\hyperlink{class_state_machine_af2d5303058b19d34831d86c2e5bb639b}{00029}}     \mbox{\hyperlink{class_listener_manager}{ListenerManager}} \mbox{\hyperlink{class_state_machine_af2d5303058b19d34831d86c2e5bb639b}{listeners}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00030}\mbox{\hyperlink{class_state_machine_ad2627c664985d95eb10208fba951b886}{00030}}     \mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_state_machine_ad2627c664985d95eb10208fba951b886}{enterKey}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00031}\mbox{\hyperlink{class_state_machine_a276573c66a5d54d9e7f5b2c033e3fbc7}{00031}}     \mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_state_machine_a276573c66a5d54d9e7f5b2c033e3fbc7}{backspaceKey}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00032}\mbox{\hyperlink{class_state_machine_a888f312380628149b0d8dc866048f862}{00032}}     \mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_state_machine_a888f312380628149b0d8dc866048f862}{pause}};}
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_state_machine_8h_source_l00034}00034 \};}
+
+\end{DoxyCode}

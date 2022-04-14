@@ -1,0 +1,43 @@
+\hypertarget{_controls_state_8cpp_source}{}\doxysection{Controls\+State.\+cpp}
+\label{_controls_state_8cpp_source}\index{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/ControlsState.cpp@{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/ControlsState.cpp}}
+\mbox{\hyperlink{_controls_state_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_controls_state_8h}{ControlsState.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00003}\mbox{\hyperlink{class_controls_state_a0520a30b1402567c1f1664b663d77d65}{00003}} \mbox{\hyperlink{class_controls_state_a0520a30b1402567c1f1664b663d77d65}{ControlsState::ControlsState}}(\mbox{\hyperlink{class_game}{Game}}* window)}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00005}00005     \mbox{\hyperlink{class_state_a0b2cc4d1f24881f8e0ac5dd5c80e4799}{mGame}} = window;}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00006}00006     \mbox{\hyperlink{class_state_af4c75bfbdf3ef7697dffd853bf54feeb}{mSceneGraph}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_scene_node}{SceneNode}}(window, \textcolor{stringliteral}{"{}Controls State"{}});}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00007}00007     \mbox{\hyperlink{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}{mBackground}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00008}00008     \mbox{\hyperlink{class_state_aa8cb044d08ab3afad3c9dffc09559a0c}{mStateType}} = \mbox{\hyperlink{_state_list_8h_a808e5cd4979462d3bbe3070d7d147444a393f1c9d97ebde3fdc582a418991a403}{States::PAUSE\_STATE}};}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00009}00009     \mbox{\hyperlink{class_state_a096278179e1ca3c5619008e2369032ab}{mOrder}} = 2;}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00012}\mbox{\hyperlink{class_controls_state_ac6574f6109c4e2eb27bd3427d8501450}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controls_state_ac6574f6109c4e2eb27bd3427d8501450}{ControlsState::getInputs}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00015}00015 \}}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00021}\mbox{\hyperlink{class_controls_state_a7cd9721e5194ffb1a78f360db49a83d6}{00021}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controls_state_a7cd9721e5194ffb1a78f360db49a83d6}{ControlsState::draw}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00022}00022 \{}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00023}00023     \mbox{\hyperlink{class_state_af4c75bfbdf3ef7697dffd853bf54feeb}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a41b1a847182e49103bc145bd4604e056}{draw}}();}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00030}\mbox{\hyperlink{class_controls_state_a77b0b1d8a93c08416d4561039161b946}{00030}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controls_state_a77b0b1d8a93c08416d4561039161b946}{ControlsState::update}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00032}00032     \mbox{\hyperlink{class_state_af4c75bfbdf3ef7697dffd853bf54feeb}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a45f8882749060b059fe26eb02f7f843b}{setPosition}}(0, 0, 2 * \mbox{\hyperlink{class_state_a096278179e1ca3c5619008e2369032ab}{mOrder}});}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00033}00033     \mbox{\hyperlink{class_state_af4c75bfbdf3ef7697dffd853bf54feeb}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a858b7a088c0a2d01aaa90baf05d58d08}{update}}(gt);}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00039}\mbox{\hyperlink{class_controls_state_ac1f9a4f257b5cf0da2bf9638aa2d4f61}{00039}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controls_state_ac1f9a4f257b5cf0da2bf9638aa2d4f61}{ControlsState::load}}()}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00040}00040 \{}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00041}00041     std::unique\_ptr<SpriteNode> bg(\textcolor{keyword}{new} \mbox{\hyperlink{class_sprite_node}{SpriteNode}}(\mbox{\hyperlink{class_state_a0b2cc4d1f24881f8e0ac5dd5c80e4799}{mGame}}, \textcolor{stringliteral}{"{}Controls"{}}, \textcolor{stringliteral}{"{}Bg"{}}));}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00042}00042     \mbox{\hyperlink{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}{mBackground}} = bg.get();}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00043}00043     \mbox{\hyperlink{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}{mBackground}}-\/>\mbox{\hyperlink{class_scene_node_a45f8882749060b059fe26eb02f7f843b}{setPosition}}(0, 0, 1 + \mbox{\hyperlink{class_state_a096278179e1ca3c5619008e2369032ab}{mOrder}});}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00044}00044     \mbox{\hyperlink{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}{mBackground}}-\/>\mbox{\hyperlink{class_scene_node_a753cea60b8a939a82a47258f4a51df82}{setScale}}(15.0, 1.0, 11.0);}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00045}00045     \mbox{\hyperlink{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}{mBackground}}-\/>\mbox{\hyperlink{class_scene_node_a66fa14e7553900ae540f13e4dc5f749b}{setWorldRotation}}(90 * XM\_PI / 180, 0, 180 * XM\_PI / 180);}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00046}00046     \mbox{\hyperlink{class_state_af4c75bfbdf3ef7697dffd853bf54feeb}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_acdfa2c2ba28bce076c886eaba2d9e650}{attachChild}}(std::move(bg));}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00047}00047     \mbox{\hyperlink{class_state_af4c75bfbdf3ef7697dffd853bf54feeb}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a67ca883a91d8c45004a0786330548d8f}{build}}();}
+\DoxyCodeLine{\Hypertarget{_controls_state_8cpp_source_l00048}00048 \}}
+
+\end{DoxyCode}

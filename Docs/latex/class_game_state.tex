@@ -1,0 +1,213 @@
+\hypertarget{class_game_state}{}\doxysection{Game\+State Class Reference}
+\label{class_game_state}\index{GameState@{GameState}}
+
+
+{\ttfamily \#include $<$Game\+State.\+h$>$}
+
+Inheritance diagram for Game\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_state_aa14d99840fcdb239e5e25c1bcba38997}{Game\+State}} (\mbox{\hyperlink{class_game}{Game}} $\ast$window)
+\item 
+void \mbox{\hyperlink{class_game_state_ae2c81fe4cadadd1a8a895ce737b03996}{get\+Inputs}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\begin{DoxyCompactList}\small\item\em Getting the inputs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_a3bcc929ae24ca7f7fd7e331dc478a8a5}{draw}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\begin{DoxyCompactList}\small\item\em Drawing the state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_a5b70de59b4341928e42b78c48fee1d60}{update}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\item 
+void \mbox{\hyperlink{class_game_state_ab89118f53bfc362e67e061539f3181da}{load}} () override
+\begin{DoxyCompactList}\small\item\em Loading the \mbox{\hyperlink{class_state}{State}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_game_state_aaeddd86459e243706304b5d296849932}{is\+Paused}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprite_node}{Sprite\+Node}} $\ast$ \mbox{\hyperlink{class_game_state_a0a5cfb6ed7fb101ab75b454fd8fb0e1b}{m\+Background}}
+\item 
+\mbox{\hyperlink{class_sprite_node}{Sprite\+Node}} $\ast$ \mbox{\hyperlink{class_game_state_a9a5aa63bcf94be5b800b71cf49d5d3ea}{m\+Pause}}
+\item 
+\mbox{\hyperlink{class_player}{Player}} $\ast$ \mbox{\hyperlink{class_game_state_a650a9acffc3c4e2eda31b894e8d830f8}{m\+Player}}
+\item 
+\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ \mbox{\hyperlink{class_game_state_ac3f4805cc5824146ddf86f586c983060}{m\+Enemy1}}
+\item 
+\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ \mbox{\hyperlink{class_game_state_a2a6b23362952be81b40bf80b5f3d0616}{m\+Enemy2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_game_state_8h_source_l00005}{5}} of file \mbox{\hyperlink{_game_state_8h_source}{Game\+State.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_state_aa14d99840fcdb239e5e25c1bcba38997}\label{class_game_state_aa14d99840fcdb239e5e25c1bcba38997}} 
+\index{GameState@{GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}}
+{\footnotesize\ttfamily Game\+State\+::\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_game_state_8cpp_source}{Game\+State.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_state_a3bcc929ae24ca7f7fd7e331dc478a8a5}\label{class_game_state_a3bcc929ae24ca7f7fd7e331dc478a8a5}} 
+\index{GameState@{GameState}!draw@{draw}}
+\index{draw@{draw}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+State\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Drawing the state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_state_ad3fc08fc47755bb59b36bf104133a9e0}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_game_state_8cpp_source}{Game\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_game_state_ae2c81fe4cadadd1a8a895ce737b03996}\label{class_game_state_ae2c81fe4cadadd1a8a895ce737b03996}} 
+\index{GameState@{GameState}!getInputs@{getInputs}}
+\index{getInputs@{getInputs}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{getInputs()}{getInputs()}}
+{\footnotesize\ttfamily void Game\+State\+::get\+Inputs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getting the inputs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a2681a5d16b66bf5a9a161d539f6bd088}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_game_state_8cpp_source}{Game\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_game_state_ab89118f53bfc362e67e061539f3181da}\label{class_game_state_ab89118f53bfc362e67e061539f3181da}} 
+\index{GameState@{GameState}!load@{load}}
+\index{load@{load}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Game\+State\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loading the \mbox{\hyperlink{class_state}{State}} 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a49c1e4c959c3cb15311f6daf3b169645}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_game_state_8cpp_source}{Game\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_game_state_a5b70de59b4341928e42b78c48fee1d60}\label{class_game_state_a5b70de59b4341928e42b78c48fee1d60}} 
+\index{GameState@{GameState}!update@{update}}
+\index{update@{update}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+State\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a2025f14180f7ec933d451976597a711d}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_game_state_8cpp_source}{Game\+State.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_state_aaeddd86459e243706304b5d296849932}\label{class_game_state_aaeddd86459e243706304b5d296849932}} 
+\index{GameState@{GameState}!isPaused@{isPaused}}
+\index{isPaused@{isPaused}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{isPaused}{isPaused}}
+{\footnotesize\ttfamily bool Game\+State\+::is\+Paused}
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8h_source_l00011}{11}} of file \mbox{\hyperlink{_game_state_8h_source}{Game\+State.\+h}}.
+
+\mbox{\Hypertarget{class_game_state_a0a5cfb6ed7fb101ab75b454fd8fb0e1b}\label{class_game_state_a0a5cfb6ed7fb101ab75b454fd8fb0e1b}} 
+\index{GameState@{GameState}!mBackground@{mBackground}}
+\index{mBackground@{mBackground}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{mBackground}{mBackground}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}$\ast$ Game\+State\+::m\+Background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8h_source_l00020}{20}} of file \mbox{\hyperlink{_game_state_8h_source}{Game\+State.\+h}}.
+
+\mbox{\Hypertarget{class_game_state_ac3f4805cc5824146ddf86f586c983060}\label{class_game_state_ac3f4805cc5824146ddf86f586c983060}} 
+\index{GameState@{GameState}!mEnemy1@{mEnemy1}}
+\index{mEnemy1@{mEnemy1}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{mEnemy1}{mEnemy1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy}{Enemy}}$\ast$ Game\+State\+::m\+Enemy1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8h_source_l00023}{23}} of file \mbox{\hyperlink{_game_state_8h_source}{Game\+State.\+h}}.
+
+\mbox{\Hypertarget{class_game_state_a2a6b23362952be81b40bf80b5f3d0616}\label{class_game_state_a2a6b23362952be81b40bf80b5f3d0616}} 
+\index{GameState@{GameState}!mEnemy2@{mEnemy2}}
+\index{mEnemy2@{mEnemy2}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{mEnemy2}{mEnemy2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy}{Enemy}}$\ast$ Game\+State\+::m\+Enemy2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8h_source_l00024}{24}} of file \mbox{\hyperlink{_game_state_8h_source}{Game\+State.\+h}}.
+
+\mbox{\Hypertarget{class_game_state_a9a5aa63bcf94be5b800b71cf49d5d3ea}\label{class_game_state_a9a5aa63bcf94be5b800b71cf49d5d3ea}} 
+\index{GameState@{GameState}!mPause@{mPause}}
+\index{mPause@{mPause}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{mPause}{mPause}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}$\ast$ Game\+State\+::m\+Pause\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8h_source_l00021}{21}} of file \mbox{\hyperlink{_game_state_8h_source}{Game\+State.\+h}}.
+
+\mbox{\Hypertarget{class_game_state_a650a9acffc3c4e2eda31b894e8d830f8}\label{class_game_state_a650a9acffc3c4e2eda31b894e8d830f8}} 
+\index{GameState@{GameState}!mPlayer@{mPlayer}}
+\index{mPlayer@{mPlayer}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{mPlayer}{mPlayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}}$\ast$ Game\+State\+::m\+Player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_game_state_8h_source_l00022}{22}} of file \mbox{\hyperlink{_game_state_8h_source}{Game\+State.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_game_state_8h}{Game\+State.\+h}}\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_game_state_8cpp}{Game\+State.\+cpp}}\end{DoxyCompactItemize}

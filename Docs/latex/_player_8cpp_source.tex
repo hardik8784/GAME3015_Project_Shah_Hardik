@@ -1,0 +1,70 @@
+\hypertarget{_player_8cpp_source}{}\doxysection{Player.\+cpp}
+\label{_player_8cpp_source}\index{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/Player.cpp@{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/Player.cpp}}
+\mbox{\hyperlink{_player_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_8hpp}{Game.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00009}\mbox{\hyperlink{class_player_ae23aa65c00fd087bc84b999e7a25d833}{00009}} \mbox{\hyperlink{class_player_ae23aa65c00fd087bc84b999e7a25d833}{Player::Player}}(\mbox{\hyperlink{class_game}{Game}}* game, std::string name) : \mbox{\hyperlink{class_entity}{Entity}}(game, name)}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00011}00011     \mbox{\hyperlink{class_player_a06592a0c59c91799bff377038b3d371e}{mSprite}} = \textcolor{stringliteral}{"{}Eagle"{}};}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00012}00012     \mbox{\hyperlink{class_entity_a98ee167a16bd0d54e133be95269aa220}{mName}} = \textcolor{stringliteral}{"{}Player"{}};}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00014}00014     \textcolor{comment}{//bind arrow keys}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00015}00015     \mbox{\hyperlink{class_player_ac725a58284f282fbca930a28f04422ca}{LeftArrowKey}}.\mbox{\hyperlink{struct_listener_a9c6b8ab63151697cb460eff651414e62}{bindInt}} = 0x25;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00016}00016     \mbox{\hyperlink{class_player_a65142616aba2ecf6413678a559186496}{RightArrowKey}}.\mbox{\hyperlink{struct_listener_a9c6b8ab63151697cb460eff651414e62}{bindInt}} = 0x27;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00017}00017     \mbox{\hyperlink{class_player_a8163f1351d24b1bccbdaed8385a1a96d}{UpArrowKey}}.\mbox{\hyperlink{struct_listener_a9c6b8ab63151697cb460eff651414e62}{bindInt}} = 0x26;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00018}00018     \mbox{\hyperlink{class_player_a3ef7dad744c18a63b51124a216aec2c1}{DownArrowKey}}.\mbox{\hyperlink{struct_listener_a9c6b8ab63151697cb460eff651414e62}{bindInt}} = 0x28;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00020}00020     \mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}{AddListener}}(\mbox{\hyperlink{class_player_ac725a58284f282fbca930a28f04422ca}{LeftArrowKey}});}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00021}00021     \mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}{AddListener}}(\mbox{\hyperlink{class_player_a65142616aba2ecf6413678a559186496}{RightArrowKey}});}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00022}00022     \mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}{AddListener}}(\mbox{\hyperlink{class_player_a8163f1351d24b1bccbdaed8385a1a96d}{UpArrowKey}});}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00023}00023     \mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}{AddListener}}(\mbox{\hyperlink{class_player_a3ef7dad744c18a63b51124a216aec2c1}{DownArrowKey}});}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00030}\mbox{\hyperlink{class_player_afb32a4619a056d26b6ae3c2ae01d478c}{00030}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_afb32a4619a056d26b6ae3c2ae01d478c}{Player::input}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00032}00032     \textcolor{keywordtype}{float} speed = 2.0f * gt.\mbox{\hyperlink{class_game_timer_a67d0ce60fa40d5ff728d101fc31e30f6}{DeltaTime}}();}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00033}00033     }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00034}00034     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{CheckListener}}(\mbox{\hyperlink{class_player_ac725a58284f282fbca930a28f04422ca}{LeftArrowKey}}))}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00036}00036         \mbox{\hyperlink{class_scene_node_aec657f40def4be5c901192ec85027a35}{move}}(-\/speed, 0, 0);}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00039}00039     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{CheckListener}}(\mbox{\hyperlink{class_player_a65142616aba2ecf6413678a559186496}{RightArrowKey}}))}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00041}00041         \mbox{\hyperlink{class_scene_node_aec657f40def4be5c901192ec85027a35}{move}}(speed, 0, 0);}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00044}00044     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{CheckListener}}(\mbox{\hyperlink{class_player_a8163f1351d24b1bccbdaed8385a1a96d}{UpArrowKey}}))}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00045}00045     \{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00046}00046         \mbox{\hyperlink{class_scene_node_aec657f40def4be5c901192ec85027a35}{move}}(0, speed, 0);}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00048}00048     }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00049}00049     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{CheckListener}}(\mbox{\hyperlink{class_player_a3ef7dad744c18a63b51124a216aec2c1}{DownArrowKey}}))}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00050}00050     \{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00051}00051         \mbox{\hyperlink{class_scene_node_aec657f40def4be5c901192ec85027a35}{move}}(0, -\/speed, 0);}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00053}00053 \}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00055}\mbox{\hyperlink{class_player_a2d7b238b59b6f2c4c468d3ae780162b3}{00055}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a2d7b238b59b6f2c4c468d3ae780162b3}{Player::drawCurrent}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00056}00056 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00058}00058 \}}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00063}\mbox{\hyperlink{class_player_a874bca03fa4dee32c2405d78546070b7}{00063}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a874bca03fa4dee32c2405d78546070b7}{Player::buildCurrent}}()}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00064}00064 \{}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00065}00065     \textcolor{keyword}{auto} render = std::make\_unique<RenderItem>();}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00066}00066     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}} = render.get();}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00067}00067     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a2e0a651d0ad4ba7975455e22fbde1a28}{World}} = \mbox{\hyperlink{class_scene_node_a5e503eeca953d36b652a12ceadb64d28}{getTransform}}();}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00068}00068     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a4a4015284acd79469b70c358b6c1c2a1}{ObjCBIndex}} = \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_aab13f3fdd19f7fec4d64922e36cf3088}{getRenderItems}}().size();}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00069}00069     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a356068fffd78f172c796d44fe02d08d2}{Mat}} = \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_a2ab854095110829c9fb607b8bf3b50e1}{getMaterials}}()[\mbox{\hyperlink{class_player_a06592a0c59c91799bff377038b3d371e}{mSprite}}].get();}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00070}00070     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}} = \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_a8fecc6dedc120a94d9940ad5d7518242}{getGeometries}}()[\textcolor{stringliteral}{"{}boxGeo"{}}].get();}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00071}00071     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_ab3aad9050526250c4877956789e50b3a}{PrimitiveType}} = D3D\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00072}00072     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_ad95fafa012c0d99c216b998f11207e38}{IndexCount}} = \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}}-\/>\mbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{DrawArgs}}[\textcolor{stringliteral}{"{}box"{}}].IndexCount;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00073}00073     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a979179c6dd354cd329563e3599245463}{StartIndexLocation}} = \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}}-\/>\mbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{DrawArgs}}[\textcolor{stringliteral}{"{}box"{}}].StartIndexLocation;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00074}00074     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a3750ef7b2791ea922df46e222649f3dc}{BaseVertexLocation}} = \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}}-\/>\mbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{DrawArgs}}[\textcolor{stringliteral}{"{}box"{}}].BaseVertexLocation;}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00075}00075     \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_aab13f3fdd19f7fec4d64922e36cf3088}{getRenderItems}}().push\_back(std::move(render));}
+\DoxyCodeLine{\Hypertarget{_player_8cpp_source_l00076}00076 \}}
+
+\end{DoxyCode}

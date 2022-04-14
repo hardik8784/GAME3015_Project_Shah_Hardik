@@ -1,0 +1,155 @@
+\hypertarget{class_controls_state}{}\doxysection{Controls\+State Class Reference}
+\label{class_controls_state}\index{ControlsState@{ControlsState}}
+
+
+Created the \mbox{\hyperlink{class_controls_state}{Controls\+State}}  
+
+
+
+
+{\ttfamily \#include $<$Controls\+State.\+h$>$}
+
+Inheritance diagram for Controls\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_controls_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controls_state_a0520a30b1402567c1f1664b663d77d65}{Controls\+State}} (\mbox{\hyperlink{class_game}{Game}} $\ast$window)
+\item 
+void \mbox{\hyperlink{class_controls_state_ac6574f6109c4e2eb27bd3427d8501450}{get\+Inputs}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\item 
+void \mbox{\hyperlink{class_controls_state_a7cd9721e5194ffb1a78f360db49a83d6}{draw}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\begin{DoxyCompactList}\small\item\em Draw the scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controls_state_a77b0b1d8a93c08416d4561039161b946}{update}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\begin{DoxyCompactList}\small\item\em update the scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controls_state_ac1f9a4f257b5cf0da2bf9638aa2d4f61}{load}} () override
+\begin{DoxyCompactList}\small\item\em load the textures \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprite_node}{Sprite\+Node}} $\ast$ \mbox{\hyperlink{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}{m\+Background}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Created the \mbox{\hyperlink{class_controls_state}{Controls\+State}} 
+
+Definition at line \mbox{\hyperlink{_controls_state_8h_source_l00007}{7}} of file \mbox{\hyperlink{_controls_state_8h_source}{Controls\+State.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controls_state_a0520a30b1402567c1f1664b663d77d65}\label{class_controls_state_a0520a30b1402567c1f1664b663d77d65}} 
+\index{ControlsState@{ControlsState}!ControlsState@{ControlsState}}
+\index{ControlsState@{ControlsState}!ControlsState@{ControlsState}}
+\doxysubsubsection{\texorpdfstring{ControlsState()}{ControlsState()}}
+{\footnotesize\ttfamily Controls\+State\+::\+Controls\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_controls_state_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_controls_state_8cpp_source}{Controls\+State.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controls_state_a7cd9721e5194ffb1a78f360db49a83d6}\label{class_controls_state_a7cd9721e5194ffb1a78f360db49a83d6}} 
+\index{ControlsState@{ControlsState}!draw@{draw}}
+\index{draw@{draw}!ControlsState@{ControlsState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Controls\+State\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw the scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_state_ad3fc08fc47755bb59b36bf104133a9e0}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_controls_state_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_controls_state_8cpp_source}{Controls\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_controls_state_ac6574f6109c4e2eb27bd3427d8501450}\label{class_controls_state_ac6574f6109c4e2eb27bd3427d8501450}} 
+\index{ControlsState@{ControlsState}!getInputs@{getInputs}}
+\index{getInputs@{getInputs}!ControlsState@{ControlsState}}
+\doxysubsubsection{\texorpdfstring{getInputs()}{getInputs()}}
+{\footnotesize\ttfamily void Controls\+State\+::get\+Inputs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a2681a5d16b66bf5a9a161d539f6bd088}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_controls_state_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_controls_state_8cpp_source}{Controls\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_controls_state_ac1f9a4f257b5cf0da2bf9638aa2d4f61}\label{class_controls_state_ac1f9a4f257b5cf0da2bf9638aa2d4f61}} 
+\index{ControlsState@{ControlsState}!load@{load}}
+\index{load@{load}!ControlsState@{ControlsState}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Controls\+State\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+load the textures 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a49c1e4c959c3cb15311f6daf3b169645}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_controls_state_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_controls_state_8cpp_source}{Controls\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_controls_state_a77b0b1d8a93c08416d4561039161b946}\label{class_controls_state_a77b0b1d8a93c08416d4561039161b946}} 
+\index{ControlsState@{ControlsState}!update@{update}}
+\index{update@{update}!ControlsState@{ControlsState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Controls\+State\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+update the scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a2025f14180f7ec933d451976597a711d}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_controls_state_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_controls_state_8cpp_source}{Controls\+State.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}\label{class_controls_state_a29bbb9401406e2ce5333fb1ab442a6c2}} 
+\index{ControlsState@{ControlsState}!mBackground@{mBackground}}
+\index{mBackground@{mBackground}!ControlsState@{ControlsState}}
+\doxysubsubsection{\texorpdfstring{mBackground}{mBackground}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}$\ast$ Controls\+State\+::m\+Background}
+
+
+
+Definition at line \mbox{\hyperlink{_controls_state_8h_source_l00010}{10}} of file \mbox{\hyperlink{_controls_state_8h_source}{Controls\+State.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_controls_state_8h}{Controls\+State.\+h}}\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_controls_state_8cpp}{Controls\+State.\+cpp}}\end{DoxyCompactItemize}

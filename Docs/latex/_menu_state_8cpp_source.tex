@@ -1,0 +1,89 @@
+\hypertarget{_menu_state_8cpp_source}{}\doxysection{Menu\+State.\+cpp}
+\label{_menu_state_8cpp_source}\index{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/MenuState.cpp@{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/MenuState.cpp}}
+\mbox{\hyperlink{_menu_state_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_menu_state_8h}{MenuState.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00004}\mbox{\hyperlink{class_menu_state_a3e14590b9022985d72284ef4755442dc}{00004}} \mbox{\hyperlink{class_menu_state_a3e14590b9022985d72284ef4755442dc}{MenuState::MenuState}}(\mbox{\hyperlink{class_game}{Game}}* window)}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00006}00006     \mbox{\hyperlink{class_menu_state_a8a65f4644a8272811d8b91a25c095f49}{mGame}} = window;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00007}00007     \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{mSceneGraph}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_scene_node}{SceneNode}}(window, \textcolor{stringliteral}{"{}Menu State"{}});}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00008}00008     \mbox{\hyperlink{class_menu_state_acecdec56998c14feefaaae087bf74661}{mBackground}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00009}00009     \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{mArrow}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00010}00010     \mbox{\hyperlink{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}{option}} = 0;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00011}00011     \mbox{\hyperlink{class_state_aa8cb044d08ab3afad3c9dffc09559a0c}{mStateType}} = \mbox{\hyperlink{_state_list_8h_a808e5cd4979462d3bbe3070d7d147444a422cb3039a2605f8ce21bb98f0dec565}{States::MENU\_STATE}};}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00012}00012     \mbox{\hyperlink{class_state_a096278179e1ca3c5619008e2369032ab}{mOrder}} = 1;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00019}\mbox{\hyperlink{class_menu_state_a2b76453eac628330494e6c606193790f}{00019}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_a2b76453eac628330494e6c606193790f}{MenuState::getInputs}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00020}00020 \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00021}00021     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{CheckListener}}(\mbox{\hyperlink{class_menu_state_ac9b60681ca4223f2a3e4d492b2dd6753}{up}}))}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00023}00023         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}{option}} == 1)}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00025}00025             \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{mArrow}}-\/>\mbox{\hyperlink{class_scene_node_a45f8882749060b059fe26eb02f7f843b}{setPosition}}(-\/1.4f, 0.26, 0);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00026}00026             \mbox{\hyperlink{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}{option}} = 0;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00030}00030     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{CheckListener}}(\mbox{\hyperlink{class_menu_state_a07e03388c545f3306b6c86519888b10d}{down}}))}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00031}00031     \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00032}00032         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}{option}} == 0)}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00033}00033         \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00034}00034             \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{mArrow}}-\/>\mbox{\hyperlink{class_scene_node_a45f8882749060b059fe26eb02f7f843b}{setPosition}}(-\/1.5f, -\/1.125f, 0);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00035}00035             \mbox{\hyperlink{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}{option}} = 1;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00037}00037         \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00040}00040     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{CheckListener}}(\mbox{\hyperlink{class_menu_state_ac285c3519fb66116a4df40f7b8b17651}{quit}}))}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00042}00042         exit(1);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00050}\mbox{\hyperlink{class_menu_state_aac280a45d643d4efc61b2665403c7820}{00050}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_aac280a45d643d4efc61b2665403c7820}{MenuState::draw}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00051}00051 \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00052}00052     \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a41b1a847182e49103bc145bd4604e056}{draw}}();}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00053}00053 \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00059}\mbox{\hyperlink{class_menu_state_a97436da8bf5f29efdf54f01607ec9c06}{00059}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_a97436da8bf5f29efdf54f01607ec9c06}{MenuState::update}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00060}00060 \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00061}00061     \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a45f8882749060b059fe26eb02f7f843b}{setPosition}}(0, 0, 2 * \mbox{\hyperlink{class_state_a096278179e1ca3c5619008e2369032ab}{mOrder}});}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00062}00062     \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a858b7a088c0a2d01aaa90baf05d58d08}{update}}(gt);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00063}00063     \mbox{\hyperlink{class_menu_state_a2b76453eac628330494e6c606193790f}{getInputs}}(gt);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00069}\mbox{\hyperlink{class_menu_state_a24621aace605f7e7e26c8cb68393436b}{00069}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_a24621aace605f7e7e26c8cb68393436b}{MenuState::load}}()}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00070}00070 \{}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00071}00071     std::unique\_ptr<SpriteNode> selector(\textcolor{keyword}{new} \mbox{\hyperlink{class_sprite_node}{SpriteNode}}(\mbox{\hyperlink{class_menu_state_a8a65f4644a8272811d8b91a25c095f49}{mGame}}, \textcolor{stringliteral}{"{}Selector"{}}, \textcolor{stringliteral}{"{}Arrow"{}}));}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00072}00072     \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{mArrow}} = selector.get();}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00073}00073     \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{mArrow}}-\/>\mbox{\hyperlink{class_scene_node_a45f8882749060b059fe26eb02f7f843b}{setPosition}}(-\/1.4f, 0.26, 0 );}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00074}00074     \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{mArrow}}-\/>\mbox{\hyperlink{class_scene_node_a753cea60b8a939a82a47258f4a51df82}{setScale}}(0.3, 0.3, 0.3);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00075}00075     \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{mArrow}}-\/>\mbox{\hyperlink{class_scene_node_a66fa14e7553900ae540f13e4dc5f749b}{setWorldRotation}}(90 * XM\_PI / 180, 0, 180 * XM\_PI / 180);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00076}00076     \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_acdfa2c2ba28bce076c886eaba2d9e650}{attachChild}}(std::move(selector));}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00078}00078     std::unique\_ptr<SpriteNode> menubg(\textcolor{keyword}{new} \mbox{\hyperlink{class_sprite_node}{SpriteNode}}(\mbox{\hyperlink{class_menu_state_a8a65f4644a8272811d8b91a25c095f49}{mGame}}, \textcolor{stringliteral}{"{}Menu"{}}, \textcolor{stringliteral}{"{}BG"{}}));}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00079}00079     \mbox{\hyperlink{class_menu_state_acecdec56998c14feefaaae087bf74661}{mBackground}} = menubg.get();}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00080}00080     \mbox{\hyperlink{class_menu_state_acecdec56998c14feefaaae087bf74661}{mBackground}}-\/>\mbox{\hyperlink{class_scene_node_a45f8882749060b059fe26eb02f7f843b}{setPosition}}(0, 0, 1 + \mbox{\hyperlink{class_state_a096278179e1ca3c5619008e2369032ab}{mOrder}});}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00081}00081     \mbox{\hyperlink{class_menu_state_acecdec56998c14feefaaae087bf74661}{mBackground}}-\/>\mbox{\hyperlink{class_scene_node_a753cea60b8a939a82a47258f4a51df82}{setScale}}(15.0, 1.0, 10 );}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00082}00082     \mbox{\hyperlink{class_menu_state_acecdec56998c14feefaaae087bf74661}{mBackground}}-\/>\mbox{\hyperlink{class_scene_node_a66fa14e7553900ae540f13e4dc5f749b}{setWorldRotation}}(90 * XM\_PI / 180, 0, 180 * XM\_PI / 180);}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00083}00083     \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_acdfa2c2ba28bce076c886eaba2d9e650}{attachChild}}(std::move(menubg));}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00084}00084     \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{mSceneGraph}}-\/>\mbox{\hyperlink{class_scene_node_a67ca883a91d8c45004a0786330548d8f}{build}}();}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00086}00086     \textcolor{comment}{//up arrow}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00087}00087     \mbox{\hyperlink{class_menu_state_ac9b60681ca4223f2a3e4d492b2dd6753}{up}}.\mbox{\hyperlink{struct_listener_a9c6b8ab63151697cb460eff651414e62}{bindInt}} = 0x26;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00089}00089     \textcolor{comment}{//down arroe}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00090}00090     \mbox{\hyperlink{class_menu_state_a07e03388c545f3306b6c86519888b10d}{down}}.\mbox{\hyperlink{struct_listener_a9c6b8ab63151697cb460eff651414e62}{bindInt}} = 0x28;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00092}00092     \textcolor{comment}{//quit}}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00093}00093     \mbox{\hyperlink{class_menu_state_ac285c3519fb66116a4df40f7b8b17651}{quit}}.\mbox{\hyperlink{struct_listener_a9c6b8ab63151697cb460eff651414e62}{bindInt}} = 0x1B;}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00096}00096     \mbox{\hyperlink{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}{AddListener}}(\mbox{\hyperlink{class_menu_state_ac9b60681ca4223f2a3e4d492b2dd6753}{up}});}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00097}00097     \mbox{\hyperlink{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}{listenerManager}}.\mbox{\hyperlink{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}{AddListener}}(\mbox{\hyperlink{class_menu_state_a07e03388c545f3306b6c86519888b10d}{down}});}
+\DoxyCodeLine{\Hypertarget{_menu_state_8cpp_source_l00098}00098 \}}
+
+\end{DoxyCode}

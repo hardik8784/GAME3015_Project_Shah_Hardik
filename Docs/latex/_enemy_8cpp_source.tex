@@ -1,0 +1,35 @@
+\hypertarget{_enemy_8cpp_source}{}\doxysection{Enemy.\+cpp}
+\label{_enemy_8cpp_source}\index{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/Enemy.cpp@{H:/GAME3015/GAME3015\_Project\_Shah\_Hardik/GAME3015-\/Assignment1/GAME3015-\/Assignment1/Enemy.cpp}}
+\mbox{\hyperlink{_enemy_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_8hpp}{Game.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00009}\mbox{\hyperlink{class_enemy_a2499ab936d83c91fbc6e701dd82e0dbc}{00009}} \mbox{\hyperlink{class_enemy_a2499ab936d83c91fbc6e701dd82e0dbc}{Enemy::Enemy}}(\mbox{\hyperlink{class_game}{Game}}* game, std::string name) : \mbox{\hyperlink{class_entity}{Entity}}(game, name)}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00011}00011     \mbox{\hyperlink{class_enemy_a314814a7d78c198067fcfccf474ab1c6}{mSprite}} = \textcolor{stringliteral}{"{}Raptor"{}};}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00012}00012     \mbox{\hyperlink{class_entity_a98ee167a16bd0d54e133be95269aa220}{mName}} = name;}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00018}\mbox{\hyperlink{class_enemy_aabd37994f49244f978c3454559db83ce}{00018}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_aabd37994f49244f978c3454559db83ce}{Enemy::buildCurrent}}()}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00020}00020     \textcolor{keyword}{auto} render = std::make\_unique<RenderItem>();}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00021}00021     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}} = render.get();}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00022}00022     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a2e0a651d0ad4ba7975455e22fbde1a28}{World}} = \mbox{\hyperlink{class_scene_node_a5e503eeca953d36b652a12ceadb64d28}{getTransform}}();}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00023}00023     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a4a4015284acd79469b70c358b6c1c2a1}{ObjCBIndex}} = \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_aab13f3fdd19f7fec4d64922e36cf3088}{getRenderItems}}().size();}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00024}00024     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a356068fffd78f172c796d44fe02d08d2}{Mat}} = \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_a2ab854095110829c9fb607b8bf3b50e1}{getMaterials}}()[\mbox{\hyperlink{class_enemy_a314814a7d78c198067fcfccf474ab1c6}{mSprite}}].get();}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00025}00025     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}} = \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_a8fecc6dedc120a94d9940ad5d7518242}{getGeometries}}()[\textcolor{stringliteral}{"{}boxGeo"{}}].get();}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00026}00026     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_ab3aad9050526250c4877956789e50b3a}{PrimitiveType}} = D3D\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST;}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00027}00027     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_ad95fafa012c0d99c216b998f11207e38}{IndexCount}} = \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}}-\/>\mbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{DrawArgs}}[\textcolor{stringliteral}{"{}box"{}}].IndexCount;}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00028}00028     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a979179c6dd354cd329563e3599245463}{StartIndexLocation}} = \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}}-\/>\mbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{DrawArgs}}[\textcolor{stringliteral}{"{}box"{}}].StartIndexLocation;}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00029}00029     \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a3750ef7b2791ea922df46e222649f3dc}{BaseVertexLocation}} = \mbox{\hyperlink{class_scene_node_a51b22a4d6789039a96ebab097ed03db0}{renderer}}-\/>\mbox{\hyperlink{struct_render_item_a7e4ddbefdc41b7efcad3c3a4b0ceccd9}{Geo}}-\/>\mbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{DrawArgs}}[\textcolor{stringliteral}{"{}box"{}}].BaseVertexLocation;}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00031}00031     \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}-\/>\mbox{\hyperlink{class_game_aab13f3fdd19f7fec4d64922e36cf3088}{getRenderItems}}().push\_back(std::move(render));}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00034}\mbox{\hyperlink{class_enemy_a3fad70d8f5e9def740f6c3e6ec4c9a26}{00034}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a3fad70d8f5e9def740f6c3e6ec4c9a26}{Enemy::drawCurrent}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00035}00035 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_enemy_8cpp_source_l00037}00037 \}}
+
+\end{DoxyCode}

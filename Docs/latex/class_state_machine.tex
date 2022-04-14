@@ -1,0 +1,266 @@
+\hypertarget{class_state_machine}{}\doxysection{State\+Machine Class Reference}
+\label{class_state_machine}\index{StateMachine@{StateMachine}}
+
+
+{\ttfamily \#include $<$State\+Machine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_machine_a650a013388e5a594a0b317055f46cfba}{State\+Machine}} (\mbox{\hyperlink{class_game}{Game}} $\ast$game)
+\item 
+void \mbox{\hyperlink{class_state_machine_a45a5e48daf84f00a98f7b7d9087daacc}{draw}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt)
+\begin{DoxyCompactList}\small\item\em drawing the states \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a0b92198ca63ecf127f8590dbfd012b1b}{input}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt)
+\begin{DoxyCompactList}\small\item\em Changing the states as per the input \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a45c84d3e2d2ada9ab91af2ed95928ab4}{update}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt)
+\begin{DoxyCompactList}\small\item\em Update the state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_ab7dedb436c5f118268b0f4347f82a2e4}{Set\+State}} (\mbox{\hyperlink{class_state}{State}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Setting the state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a5e7facad173ddddc4d547733058a451c}{load}} ()
+\begin{DoxyCompactList}\small\item\em Loading the state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_state_machine_a2cd3eb5c16821ddd2e3600701942fe4e}{m\+Game}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_state}{State}} $\ast$ $>$ \mbox{\hyperlink{class_state_machine_a83450011e61e715f9875e17b5a468c82}{states}}
+\item 
+\mbox{\hyperlink{class_title_state}{Title\+State}} $\ast$ \mbox{\hyperlink{class_state_machine_a2fb35f6f929fbb92a868d4223cf278bb}{title\+State}}
+\item 
+\mbox{\hyperlink{class_menu_state}{Menu\+State}} $\ast$ \mbox{\hyperlink{class_state_machine_a4e3d9c92bdbbf0baac783fc47ca2199d}{menu\+State}}
+\item 
+\mbox{\hyperlink{class_game_state}{Game\+State}} $\ast$ \mbox{\hyperlink{class_state_machine_a434b95bbfcf45cf806ed962b86253216}{game\+State}}
+\item 
+\mbox{\hyperlink{class_controls_state}{Controls\+State}} $\ast$ \mbox{\hyperlink{class_state_machine_a51a30d7bea837dd86eef31239ed49e10}{controls\+State}}
+\item 
+\mbox{\hyperlink{class_listener_manager}{Listener\+Manager}} \mbox{\hyperlink{class_state_machine_af2d5303058b19d34831d86c2e5bb639b}{listeners}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_state_machine_ad2627c664985d95eb10208fba951b886}{enter\+Key}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_state_machine_a276573c66a5d54d9e7f5b2c033e3fbc7}{backspace\+Key}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_state_machine_a888f312380628149b0d8dc866048f862}{pause}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00008}{8}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_state_machine_a650a013388e5a594a0b317055f46cfba}\label{class_state_machine_a650a013388e5a594a0b317055f46cfba}} 
+\index{StateMachine@{StateMachine}!StateMachine@{StateMachine}}
+\index{StateMachine@{StateMachine}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{StateMachine()}{StateMachine()}}
+{\footnotesize\ttfamily State\+Machine\+::\+State\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_state_machine_8cpp_source}{State\+Machine.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_state_machine_a45a5e48daf84f00a98f7b7d9087daacc}\label{class_state_machine_a45a5e48daf84f00a98f7b7d9087daacc}} 
+\index{StateMachine@{StateMachine}!draw@{draw}}
+\index{draw@{draw}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void State\+Machine\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})}
+
+
+
+drawing the states 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_state_machine_8cpp_source}{State\+Machine.\+cpp}}.
+
+\mbox{\Hypertarget{class_state_machine_a0b92198ca63ecf127f8590dbfd012b1b}\label{class_state_machine_a0b92198ca63ecf127f8590dbfd012b1b}} 
+\index{StateMachine@{StateMachine}!input@{input}}
+\index{input@{input}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily void State\+Machine\+::input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})}
+
+
+
+Changing the states as per the input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_state_machine_8cpp_source}{State\+Machine.\+cpp}}.
+
+\mbox{\Hypertarget{class_state_machine_a5e7facad173ddddc4d547733058a451c}\label{class_state_machine_a5e7facad173ddddc4d547733058a451c}} 
+\index{StateMachine@{StateMachine}!load@{load}}
+\index{load@{load}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void State\+Machine\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loading the state 
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8cpp_source_l00141}{141}} of file \mbox{\hyperlink{_state_machine_8cpp_source}{State\+Machine.\+cpp}}.
+
+\mbox{\Hypertarget{class_state_machine_ab7dedb436c5f118268b0f4347f82a2e4}\label{class_state_machine_ab7dedb436c5f118268b0f4347f82a2e4}} 
+\index{StateMachine@{StateMachine}!SetState@{SetState}}
+\index{SetState@{SetState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{SetState()}{SetState()}}
+{\footnotesize\ttfamily void State\+Machine\+::\+Set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state}{State}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Setting the state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{_state_machine_8cpp_source}{State\+Machine.\+cpp}}.
+
+\mbox{\Hypertarget{class_state_machine_a45c84d3e2d2ada9ab91af2ed95928ab4}\label{class_state_machine_a45c84d3e2d2ada9ab91af2ed95928ab4}} 
+\index{StateMachine@{StateMachine}!update@{update}}
+\index{update@{update}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void State\+Machine\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})}
+
+
+
+Update the state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{_state_machine_8cpp_source}{State\+Machine.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_state_machine_a276573c66a5d54d9e7f5b2c033e3fbc7}\label{class_state_machine_a276573c66a5d54d9e7f5b2c033e3fbc7}} 
+\index{StateMachine@{StateMachine}!backspaceKey@{backspaceKey}}
+\index{backspaceKey@{backspaceKey}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{backspaceKey}{backspaceKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} State\+Machine\+::backspace\+Key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00031}{31}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_a51a30d7bea837dd86eef31239ed49e10}\label{class_state_machine_a51a30d7bea837dd86eef31239ed49e10}} 
+\index{StateMachine@{StateMachine}!controlsState@{controlsState}}
+\index{controlsState@{controlsState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{controlsState}{controlsState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_controls_state}{Controls\+State}}$\ast$ State\+Machine\+::controls\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00028}{28}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_ad2627c664985d95eb10208fba951b886}\label{class_state_machine_ad2627c664985d95eb10208fba951b886}} 
+\index{StateMachine@{StateMachine}!enterKey@{enterKey}}
+\index{enterKey@{enterKey}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{enterKey}{enterKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} State\+Machine\+::enter\+Key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00030}{30}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_a434b95bbfcf45cf806ed962b86253216}\label{class_state_machine_a434b95bbfcf45cf806ed962b86253216}} 
+\index{StateMachine@{StateMachine}!gameState@{gameState}}
+\index{gameState@{gameState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{gameState}{gameState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state}{Game\+State}}$\ast$ State\+Machine\+::game\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00027}{27}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_af2d5303058b19d34831d86c2e5bb639b}\label{class_state_machine_af2d5303058b19d34831d86c2e5bb639b}} 
+\index{StateMachine@{StateMachine}!listeners@{listeners}}
+\index{listeners@{listeners}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{listeners}{listeners}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_listener_manager}{Listener\+Manager}} State\+Machine\+::listeners\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00029}{29}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_a4e3d9c92bdbbf0baac783fc47ca2199d}\label{class_state_machine_a4e3d9c92bdbbf0baac783fc47ca2199d}} 
+\index{StateMachine@{StateMachine}!menuState@{menuState}}
+\index{menuState@{menuState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{menuState}{menuState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_menu_state}{Menu\+State}}$\ast$ State\+Machine\+::menu\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00026}{26}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_a2cd3eb5c16821ddd2e3600701942fe4e}\label{class_state_machine_a2cd3eb5c16821ddd2e3600701942fe4e}} 
+\index{StateMachine@{StateMachine}!mGame@{mGame}}
+\index{mGame@{mGame}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{mGame}{mGame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}$\ast$ State\+Machine\+::m\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00023}{23}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_a888f312380628149b0d8dc866048f862}\label{class_state_machine_a888f312380628149b0d8dc866048f862}} 
+\index{StateMachine@{StateMachine}!pause@{pause}}
+\index{pause@{pause}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{pause}{pause}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} State\+Machine\+::pause\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00032}{32}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_a83450011e61e715f9875e17b5a468c82}\label{class_state_machine_a83450011e61e715f9875e17b5a468c82}} 
+\index{StateMachine@{StateMachine}!states@{states}}
+\index{states@{states}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{states}{states}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_state}{State}}$\ast$$>$ State\+Machine\+::states\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00024}{24}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+\mbox{\Hypertarget{class_state_machine_a2fb35f6f929fbb92a868d4223cf278bb}\label{class_state_machine_a2fb35f6f929fbb92a868d4223cf278bb}} 
+\index{StateMachine@{StateMachine}!titleState@{titleState}}
+\index{titleState@{titleState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{titleState}{titleState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_title_state}{Title\+State}}$\ast$ State\+Machine\+::title\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_state_machine_8h_source_l00025}{25}} of file \mbox{\hyperlink{_state_machine_8h_source}{State\+Machine.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_state_machine_8h}{State\+Machine.\+h}}\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_state_machine_8cpp}{State\+Machine.\+cpp}}\end{DoxyCompactItemize}

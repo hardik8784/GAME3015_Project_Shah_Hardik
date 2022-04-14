@@ -1,0 +1,196 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_ae23aa65c00fd087bc84b999e7a25d833}{Player}} (\mbox{\hyperlink{class_game}{Game}} $\ast$\mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}}, std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_player}{Player}} \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_player_afb32a4619a056d26b6ae3c2ae01d478c}{input}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt)
+\begin{DoxyCompactList}\small\item\em Check the Inputs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_player_a2d7b238b59b6f2c4c468d3ae780162b3}{draw\+Current}} () const
+\item 
+virtual void \mbox{\hyperlink{class_player_a874bca03fa4dee32c2405d78546070b7}{build\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Build the \mbox{\hyperlink{class_player}{Player}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_player_a06592a0c59c91799bff377038b3d371e}{m\+Sprite}}
+\item 
+\mbox{\hyperlink{class_listener_manager}{Listener\+Manager}} \mbox{\hyperlink{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}{listener\+Manager}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_player_ac725a58284f282fbca930a28f04422ca}{Left\+Arrow\+Key}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_player_a65142616aba2ecf6413678a559186496}{Right\+Arrow\+Key}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_player_a8163f1351d24b1bccbdaed8385a1a96d}{Up\+Arrow\+Key}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_player_a3ef7dad744c18a63b51124a216aec2c1}{Down\+Arrow\+Key}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00006}{6}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_ae23aa65c00fd087bc84b999e7a25d833}\label{class_player_ae23aa65c00fd087bc84b999e7a25d833}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{class_player}{Player}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_player_8cpp_source}{Player.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a874bca03fa4dee32c2405d78546070b7}\label{class_player_a874bca03fa4dee32c2405d78546070b7}} 
+\index{Player@{Player}!buildCurrent@{buildCurrent}}
+\index{buildCurrent@{buildCurrent}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{buildCurrent()}{buildCurrent()}}
+{\footnotesize\ttfamily void Player\+::build\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Build the \mbox{\hyperlink{class_player}{Player}} 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_af79c6134a7706a5901c7742b5f735956}{Scene\+Node}}.
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{_player_8cpp_source}{Player.\+cpp}}.
+
+\mbox{\Hypertarget{class_player_a2d7b238b59b6f2c4c468d3ae780162b3}\label{class_player_a2d7b238b59b6f2c4c468d3ae780162b3}} 
+\index{Player@{Player}!drawCurrent@{drawCurrent}}
+\index{drawCurrent@{drawCurrent}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{drawCurrent()}{drawCurrent()}}
+{\footnotesize\ttfamily void Player\+::draw\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_a0d7d32b925dde5ed087f112774a044b8}{Scene\+Node}}.
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{_player_8cpp_source}{Player.\+cpp}}.
+
+\mbox{\Hypertarget{class_player_afb32a4619a056d26b6ae3c2ae01d478c}\label{class_player_afb32a4619a056d26b6ae3c2ae01d478c}} 
+\index{Player@{Player}!input@{input}}
+\index{input@{input}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily void Player\+::input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check the Inputs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_player_8cpp_source}{Player.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a3ef7dad744c18a63b51124a216aec2c1}\label{class_player_a3ef7dad744c18a63b51124a216aec2c1}} 
+\index{Player@{Player}!DownArrowKey@{DownArrowKey}}
+\index{DownArrowKey@{DownArrowKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{DownArrowKey}{DownArrowKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Player\+::\+Down\+Arrow\+Key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00023}{23}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+\mbox{\Hypertarget{class_player_ac725a58284f282fbca930a28f04422ca}\label{class_player_ac725a58284f282fbca930a28f04422ca}} 
+\index{Player@{Player}!LeftArrowKey@{LeftArrowKey}}
+\index{LeftArrowKey@{LeftArrowKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{LeftArrowKey}{LeftArrowKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Player\+::\+Left\+Arrow\+Key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00020}{20}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+\mbox{\Hypertarget{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}\label{class_player_a8e752bf8a6c6e6a5f8c30538f619da35}} 
+\index{Player@{Player}!listenerManager@{listenerManager}}
+\index{listenerManager@{listenerManager}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{listenerManager}{listenerManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_listener_manager}{Listener\+Manager}} Player\+::listener\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00019}{19}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+\mbox{\Hypertarget{class_player_a06592a0c59c91799bff377038b3d371e}\label{class_player_a06592a0c59c91799bff377038b3d371e}} 
+\index{Player@{Player}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily std\+::string Player\+::m\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00017}{17}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+\mbox{\Hypertarget{class_player_a65142616aba2ecf6413678a559186496}\label{class_player_a65142616aba2ecf6413678a559186496}} 
+\index{Player@{Player}!RightArrowKey@{RightArrowKey}}
+\index{RightArrowKey@{RightArrowKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{RightArrowKey}{RightArrowKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Player\+::\+Right\+Arrow\+Key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00021}{21}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+\mbox{\Hypertarget{class_player_a8163f1351d24b1bccbdaed8385a1a96d}\label{class_player_a8163f1351d24b1bccbdaed8385a1a96d}} 
+\index{Player@{Player}!UpArrowKey@{UpArrowKey}}
+\index{UpArrowKey@{UpArrowKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{UpArrowKey}{UpArrowKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Player\+::\+Up\+Arrow\+Key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00022}{22}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

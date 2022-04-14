@@ -1,0 +1,258 @@
+\hypertarget{class_menu_state}{}\doxysection{Menu\+State Class Reference}
+\label{class_menu_state}\index{MenuState@{MenuState}}
+
+
+{\ttfamily \#include $<$Menu\+State.\+h$>$}
+
+Inheritance diagram for Menu\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_menu_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_state_a3e14590b9022985d72284ef4755442dc}{Menu\+State}} (\mbox{\hyperlink{class_game}{Game}} $\ast$window)
+\item 
+void \mbox{\hyperlink{class_menu_state_a2b76453eac628330494e6c606193790f}{get\+Inputs}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\begin{DoxyCompactList}\small\item\em Checking the Inputs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_state_aac280a45d643d4efc61b2665403c7820}{draw}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\begin{DoxyCompactList}\small\item\em Drawing the scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_state_a97436da8bf5f29efdf54f01607ec9c06}{update}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt) override
+\begin{DoxyCompactList}\small\item\em Updating the scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_state_a24621aace605f7e7e26c8cb68393436b}{load}} () override
+\begin{DoxyCompactList}\small\item\em Loading the sprites \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_node}{Scene\+Node}} $\ast$ \mbox{\hyperlink{class_menu_state_ad8c844b034ace497ef028b7520519f00}{m\+Scene\+Graph}}
+\item 
+int \mbox{\hyperlink{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}{option}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_menu_state_a8a65f4644a8272811d8b91a25c095f49}{m\+Game}}
+\item 
+\mbox{\hyperlink{class_listener_manager}{Listener\+Manager}} \mbox{\hyperlink{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}{listener\+Manager}}
+\item 
+\mbox{\hyperlink{class_sprite_node}{Sprite\+Node}} $\ast$ \mbox{\hyperlink{class_menu_state_acecdec56998c14feefaaae087bf74661}{m\+Background}}
+\item 
+\mbox{\hyperlink{class_sprite_node}{Sprite\+Node}} $\ast$ \mbox{\hyperlink{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}{m\+Arrow}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_menu_state_ac9b60681ca4223f2a3e4d492b2dd6753}{up}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_menu_state_a07e03388c545f3306b6c86519888b10d}{down}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_menu_state_ac285c3519fb66116a4df40f7b8b17651}{quit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00004}{4}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_state_a3e14590b9022985d72284ef4755442dc}\label{class_menu_state_a3e14590b9022985d72284ef4755442dc}} 
+\index{MenuState@{MenuState}!MenuState@{MenuState}}
+\index{MenuState@{MenuState}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{MenuState()}{MenuState()}}
+{\footnotesize\ttfamily Menu\+State\+::\+Menu\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_menu_state_8cpp_source}{Menu\+State.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_state_aac280a45d643d4efc61b2665403c7820}\label{class_menu_state_aac280a45d643d4efc61b2665403c7820}} 
+\index{MenuState@{MenuState}!draw@{draw}}
+\index{draw@{draw}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Menu\+State\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Drawing the scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_state_ad3fc08fc47755bb59b36bf104133a9e0}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_menu_state_8cpp_source}{Menu\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_menu_state_a2b76453eac628330494e6c606193790f}\label{class_menu_state_a2b76453eac628330494e6c606193790f}} 
+\index{MenuState@{MenuState}!getInputs@{getInputs}}
+\index{getInputs@{getInputs}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{getInputs()}{getInputs()}}
+{\footnotesize\ttfamily void Menu\+State\+::get\+Inputs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checking the Inputs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a2681a5d16b66bf5a9a161d539f6bd088}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_menu_state_8cpp_source}{Menu\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_menu_state_a24621aace605f7e7e26c8cb68393436b}\label{class_menu_state_a24621aace605f7e7e26c8cb68393436b}} 
+\index{MenuState@{MenuState}!load@{load}}
+\index{load@{load}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Menu\+State\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loading the sprites 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a49c1e4c959c3cb15311f6daf3b169645}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_menu_state_8cpp_source}{Menu\+State.\+cpp}}.
+
+\mbox{\Hypertarget{class_menu_state_a97436da8bf5f29efdf54f01607ec9c06}\label{class_menu_state_a97436da8bf5f29efdf54f01607ec9c06}} 
+\index{MenuState@{MenuState}!update@{update}}
+\index{update@{update}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Menu\+State\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updating the scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gt} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_state_a2025f14180f7ec933d451976597a711d}{State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{_menu_state_8cpp_source}{Menu\+State.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_menu_state_a07e03388c545f3306b6c86519888b10d}\label{class_menu_state_a07e03388c545f3306b6c86519888b10d}} 
+\index{MenuState@{MenuState}!down@{down}}
+\index{down@{down}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{down}{down}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Menu\+State\+::down\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00025}{25}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}\label{class_menu_state_a4bc6ef8c985d089093104e286cd92f85}} 
+\index{MenuState@{MenuState}!listenerManager@{listenerManager}}
+\index{listenerManager@{listenerManager}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{listenerManager}{listenerManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_listener_manager}{Listener\+Manager}} Menu\+State\+::listener\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00021}{21}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}\label{class_menu_state_ae50d7c5f483912f91a9343404860e2f5}} 
+\index{MenuState@{MenuState}!mArrow@{mArrow}}
+\index{mArrow@{mArrow}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{mArrow}{mArrow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}$\ast$ Menu\+State\+::m\+Arrow\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00023}{23}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_acecdec56998c14feefaaae087bf74661}\label{class_menu_state_acecdec56998c14feefaaae087bf74661}} 
+\index{MenuState@{MenuState}!mBackground@{mBackground}}
+\index{mBackground@{mBackground}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{mBackground}{mBackground}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}$\ast$ Menu\+State\+::m\+Background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00022}{22}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_a8a65f4644a8272811d8b91a25c095f49}\label{class_menu_state_a8a65f4644a8272811d8b91a25c095f49}} 
+\index{MenuState@{MenuState}!mGame@{mGame}}
+\index{mGame@{mGame}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{mGame}{mGame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}$\ast$ Menu\+State\+::m\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00020}{20}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_ad8c844b034ace497ef028b7520519f00}\label{class_menu_state_ad8c844b034ace497ef028b7520519f00}} 
+\index{MenuState@{MenuState}!mSceneGraph@{mSceneGraph}}
+\index{mSceneGraph@{mSceneGraph}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{mSceneGraph}{mSceneGraph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_node}{Scene\+Node}}$\ast$ Menu\+State\+::m\+Scene\+Graph}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00008}{8}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}\label{class_menu_state_ad7e62c27d2005affeda6e7e3c3f493d3}} 
+\index{MenuState@{MenuState}!option@{option}}
+\index{option@{option}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{option}{option}}
+{\footnotesize\ttfamily int Menu\+State\+::option}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00009}{9}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_ac285c3519fb66116a4df40f7b8b17651}\label{class_menu_state_ac285c3519fb66116a4df40f7b8b17651}} 
+\index{MenuState@{MenuState}!quit@{quit}}
+\index{quit@{quit}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{quit}{quit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Menu\+State\+::quit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00026}{26}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+\mbox{\Hypertarget{class_menu_state_ac9b60681ca4223f2a3e4d492b2dd6753}\label{class_menu_state_ac9b60681ca4223f2a3e4d492b2dd6753}} 
+\index{MenuState@{MenuState}!up@{up}}
+\index{up@{up}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Menu\+State\+::up\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_state_8h_source_l00024}{24}} of file \mbox{\hyperlink{_menu_state_8h_source}{Menu\+State.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_menu_state_8h}{Menu\+State.\+h}}\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_menu_state_8cpp}{Menu\+State.\+cpp}}\end{DoxyCompactItemize}

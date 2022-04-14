@@ -1,7 +1,7 @@
 GAME3015_Project_Shah_Hardik
 
-Assignment 2: Aircraft Shooter 
-              WSAD and arrow keys to move the Aircraft
+Arrow Keysto move the Aircraft
+There are 4 states : Title, Menu, Game and Pause
 
 @author Hardik Dipakbhai Shah(Student ID:101249099) 
 

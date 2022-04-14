@@ -1,0 +1,159 @@
+\hypertarget{class_listener_manager}{}\doxysection{Listener\+Manager Class Reference}
+\label{class_listener_manager}\index{ListenerManager@{ListenerManager}}
+
+
+Class Listerner\+Manager which checks the inputs from the player  
+
+
+
+
+{\ttfamily \#include $<$Input.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}{Check\+Listener}} (\mbox{\hyperlink{struct_listener}{Listener}} ev)
+\item 
+bool \mbox{\hyperlink{class_listener_manager_a6c53a874211392832a1ddf5e1608cfef}{Check\+Trigger}} (\mbox{\hyperlink{struct_listener}{Listener}} ev)
+\item 
+\mbox{\hyperlink{class_listener_manager_a8e6d7843bec882c80dfa5aea15bf37ed}{Listener\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_listener_manager_aa453faf11e231ffb2b85e8743869fb08}{$\sim$\+Listener\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}{Add\+Listener}} (\mbox{\hyperlink{struct_listener}{Listener}} ev)
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_listener_manager_a9294bd0b3fbc8eacffb2d7d2e1b25c8a}{Prev\+Event}} ()
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_listener_manager_aba2d6be9d9a355180dac9ae7fa4161fd}{Current\+Event}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_listener}{Listener}} $>$ \mbox{\hyperlink{class_listener_manager_a0eb6672fc06fa0985a2b917511748ab8}{listeners}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_listener}{Listener}} $>$ \mbox{\hyperlink{class_listener_manager_a6d35d137c42911ac8a336033bfbe7a38}{event\+List}}
+\item 
+\mbox{\hyperlink{struct_listener}{Listener}} \mbox{\hyperlink{class_listener_manager_a7bc677e3107266f92a7b30d5b61afdae}{none}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class Listerner\+Manager which checks the inputs from the player 
+
+Definition at line \mbox{\hyperlink{_input_8h_source_l00020}{20}} of file \mbox{\hyperlink{_input_8h_source}{Input.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_listener_manager_a8e6d7843bec882c80dfa5aea15bf37ed}\label{class_listener_manager_a8e6d7843bec882c80dfa5aea15bf37ed}} 
+\index{ListenerManager@{ListenerManager}!ListenerManager@{ListenerManager}}
+\index{ListenerManager@{ListenerManager}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{ListenerManager()}{ListenerManager()}}
+{\footnotesize\ttfamily Listener\+Manager\+::\+Listener\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_input_8cpp_source}{Input.\+cpp}}.
+
+\mbox{\Hypertarget{class_listener_manager_aa453faf11e231ffb2b85e8743869fb08}\label{class_listener_manager_aa453faf11e231ffb2b85e8743869fb08}} 
+\index{ListenerManager@{ListenerManager}!````~ListenerManager@{$\sim$ListenerManager}}
+\index{````~ListenerManager@{$\sim$ListenerManager}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ListenerManager()}{~ListenerManager()}}
+{\footnotesize\ttfamily Listener\+Manager\+::$\sim$\+Listener\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_input_8cpp_source}{Input.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}\label{class_listener_manager_ab429be2c84aa6f230ff4bf7112b0d550}} 
+\index{ListenerManager@{ListenerManager}!AddListener@{AddListener}}
+\index{AddListener@{AddListener}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{AddListener()}{AddListener()}}
+{\footnotesize\ttfamily void Listener\+Manager\+::\+Add\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_listener}{Listener}}}]{ev }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_input_8cpp_source}{Input.\+cpp}}.
+
+\mbox{\Hypertarget{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}\label{class_listener_manager_a41dec62e54a1e7f7a0c34f83ae10f03b}} 
+\index{ListenerManager@{ListenerManager}!CheckListener@{CheckListener}}
+\index{CheckListener@{CheckListener}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{CheckListener()}{CheckListener()}}
+{\footnotesize\ttfamily bool Listener\+Manager\+::\+Check\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_listener}{Listener}}}]{ev }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_input_8cpp_source}{Input.\+cpp}}.
+
+\mbox{\Hypertarget{class_listener_manager_a6c53a874211392832a1ddf5e1608cfef}\label{class_listener_manager_a6c53a874211392832a1ddf5e1608cfef}} 
+\index{ListenerManager@{ListenerManager}!CheckTrigger@{CheckTrigger}}
+\index{CheckTrigger@{CheckTrigger}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{CheckTrigger()}{CheckTrigger()}}
+{\footnotesize\ttfamily bool Listener\+Manager\+::\+Check\+Trigger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_listener}{Listener}}}]{ev }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_input_8cpp_source}{Input.\+cpp}}.
+
+\mbox{\Hypertarget{class_listener_manager_aba2d6be9d9a355180dac9ae7fa4161fd}\label{class_listener_manager_aba2d6be9d9a355180dac9ae7fa4161fd}} 
+\index{ListenerManager@{ListenerManager}!CurrentEvent@{CurrentEvent}}
+\index{CurrentEvent@{CurrentEvent}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{CurrentEvent()}{CurrentEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Listener\+Manager\+::\+Current\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_input_8cpp_source}{Input.\+cpp}}.
+
+\mbox{\Hypertarget{class_listener_manager_a9294bd0b3fbc8eacffb2d7d2e1b25c8a}\label{class_listener_manager_a9294bd0b3fbc8eacffb2d7d2e1b25c8a}} 
+\index{ListenerManager@{ListenerManager}!PrevEvent@{PrevEvent}}
+\index{PrevEvent@{PrevEvent}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{PrevEvent()}{PrevEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Listener\+Manager\+::\+Prev\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_input_8cpp_source}{Input.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_listener_manager_a6d35d137c42911ac8a336033bfbe7a38}\label{class_listener_manager_a6d35d137c42911ac8a336033bfbe7a38}} 
+\index{ListenerManager@{ListenerManager}!eventList@{eventList}}
+\index{eventList@{eventList}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{eventList}{eventList}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_listener}{Listener}}$>$ Listener\+Manager\+::event\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8h_source_l00037}{37}} of file \mbox{\hyperlink{_input_8h_source}{Input.\+h}}.
+
+\mbox{\Hypertarget{class_listener_manager_a0eb6672fc06fa0985a2b917511748ab8}\label{class_listener_manager_a0eb6672fc06fa0985a2b917511748ab8}} 
+\index{ListenerManager@{ListenerManager}!listeners@{listeners}}
+\index{listeners@{listeners}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{listeners}{listeners}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_listener}{Listener}}$>$ Listener\+Manager\+::listeners\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8h_source_l00036}{36}} of file \mbox{\hyperlink{_input_8h_source}{Input.\+h}}.
+
+\mbox{\Hypertarget{class_listener_manager_a7bc677e3107266f92a7b30d5b61afdae}\label{class_listener_manager_a7bc677e3107266f92a7b30d5b61afdae}} 
+\index{ListenerManager@{ListenerManager}!none@{none}}
+\index{none@{none}!ListenerManager@{ListenerManager}}
+\doxysubsubsection{\texorpdfstring{none}{none}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_listener}{Listener}} Listener\+Manager\+::none\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_8h_source_l00038}{38}} of file \mbox{\hyperlink{_input_8h_source}{Input.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_input_8h}{Input.\+h}}\item 
+H\+:/\+GAME3015/\+GAME3015\+\_\+\+Project\+\_\+\+Shah\+\_\+\+Hardik/\+GAME3015-\/\+Assignment1/\+GAME3015-\/\+Assignment1/\mbox{\hyperlink{_input_8cpp}{Input.\+cpp}}\end{DoxyCompactItemize}
